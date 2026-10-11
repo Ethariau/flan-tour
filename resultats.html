@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Classement – Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="results">
+<header class="compact">
+  <a href="index.html"><img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux, retour à l'accueil"></a>
+  <h1>Le classement</h1>
+  <p>Bordeaux, toujours plus bon !</p>
+</header>
+<main>
+  <a class="retour" href="index.html">Retour aux pâtisseries</a>
+  <div class="vue-bloc" id="filtre">
+    <label for="vue">Classement de</label>
+    <select class="select" id="vue"><option value="">Tous les participants</option></select>
+  </div>
+  <p class="etat" id="etat" role="status"></p>
+  <ol class="classement" id="classement"></ol>
+  <button class="btn" id="maj" type="button">Actualiser</button>
+</main>
+<footer class="pied">Le flan rapproche les gens</footer>
+<script src="app.js"></script>
+</body>
+</html>

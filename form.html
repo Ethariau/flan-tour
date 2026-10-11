@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="form">
+<header class="compact">
+  <a href="index.html"><img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux, retour à l'accueil"></a>
+  <h1 id="titre">Flan</h1>
+  <p>Note chaque critère sur 10</p>
+</header>
+<main>
+  <a class="retour" href="index.html">Retour aux pâtisseries</a>
+  <div class="panneau">
+    <div class="entete"><span>Critères</span><span>/10</span></div>
+    <div id="champs"></div>
+  </div>
+</main>
+<div class="bar">
+  <div>
+    <span class="moy">Moyenne générale<strong><span id="moy">–</span>/10</strong></span>
+    <button class="btn" id="envoi" type="button" disabled>Enregistrer</button>
+  </div>
+</div>
+<p class="msg" id="msg" role="alert"></p>
+<script src="app.js"></script>
+</body>
+</html>
