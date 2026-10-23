@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Organisateur – Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+<header class="compact">
+  <a href="index.html"><img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux, retour à l'accueil"></a>
+  <h1>Espace organisateur</h1>
+</header>
+<main>
+  <a class="retour" href="index.html">Retour à l'accueil</a>
+  <section class="card" id="connexion">
+    <label class="nom" for="mdp">Mot de passe</label>
+    <input type="password" id="mdp" autocomplete="current-password">
+    <button class="btn lien" id="entrer" type="button">Entrer</button>
+    <p class="alerte" id="err" role="alert"></p>
+  </section>
+  <section id="actions" hidden>
+    <p class="etat" id="statut" role="status"></p>
+    <div class="groupe-res">
+      <a class="btn lien" href="reveal.html">Lancer la révélation (podium)</a>
+      <button class="btn lien clair" id="debloquer" type="button">Débloquer le classement général pour tous</button>
+    </div>
+    <p class="aide-couleur">Une fois débloqué, le classement général reste ouvert à tout le monde. Pour le reverrouiller, il faut modifier la cellule B1 de la feuille « Config » dans la Google Sheet.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

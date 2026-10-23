@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La révélation – Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scene.css">
+</head>
+<body data-page="reveal">
+<div class="ecran">
+  <div class="scene" id="scene">
+    <header class="tete">
+      <img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux">
+      <p class="verdict" id="verdict">Le verdict</p>
+    </header>
+    <div class="corps">
+      <ol class="liste4" id="liste4"></ol>
+      <div class="podium" id="podium"></div>
+    </div>
+    <p class="aide" id="aide" role="status">Chargement…</p>
+    <canvas id="confetti"></canvas>
+  </div>
+</div>
+<div class="cmd">
+  <button class="btn" id="suivant" type="button">Révéler</button>
+  <button class="btn" id="plein" type="button">Plein écran</button>
+</div>
+<script src="app.js"></script>
+<script src="reveal.js"></script>
+<script>
+  if (typeof initReveal === 'undefined' || typeof getStatut === 'undefined' ||
+      getComputedStyle(document.getElementById('scene')).position !== 'relative') {
+    document.getElementById('aide').textContent = "Fichiers manquants ou pas à jour : vérifie que reveal.js, scene.css et la dernière version d'app.js sont bien en ligne.";
+  }
+</script>
+</body>
+</html>

@@ -16,7 +16,7 @@ body[data-page=index] main,body[data-page=results] main{padding-bottom:8px}
 .card h2{font-size:1.1rem;margin-bottom:10px;color:var(--vin)}
 .script{font-family:'Kaushan Script',cursive;font-weight:400;font-size:1.9rem;color:var(--vin);margin:22px 0 12px}
 label.nom{display:block;font-weight:700;margin-bottom:6px}
-input[type=text],.select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--vin);border-radius:12px;background:#FFF9EC;color:var(--encre)}
+input[type=text],input[type=password],.select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--vin);border-radius:12px;background:#FFF9EC;color:var(--encre)}
 input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--vin);outline-offset:2px}
 .regles{margin:0;padding-left:20px}
 .regles li+li{margin-top:6px}
@@ -27,7 +27,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
 .flan.locked{opacity:.6}
 .btn{font:inherit;font-weight:700;min-height:48px;padding:0 20px;border:2px solid var(--vin);border-radius:14px;background:var(--vin);color:var(--papier);cursor:pointer}
 .btn:disabled{opacity:.5}
-.lien{display:flex;align-items:center;justify-content:center;margin-top:16px;text-decoration:none}
+.lien{width:100%;display:flex;align-items:center;justify-content:center;margin-top:16px;text-decoration:none}
 .retour{display:inline-block;margin:0 0 12px;color:var(--vin);padding:10px 0}
 /* formulaire */
 .panneau{border:2px solid var(--vin);border-radius:16px;overflow:hidden;background:var(--carte)}
@@ -66,8 +66,32 @@ input[type=range]{width:100%;height:44px;margin:4px 0 0;accent-color:var(--vin)}
 .rang.vide .nom-flan,.rang.vide .note-flan{opacity:.5}
 .rang.vide::before{content:"–"}
 .plus{grid-column:3;grid-row:2;justify-self:end;min-width:44px;min-height:44px;margin:8px 0 -6px;border:2px solid var(--vin);border-radius:12px;background:var(--papier);color:var(--vin);font:inherit;font-size:1.4rem;font-weight:700;cursor:pointer}
-.detail{grid-column:1/4;grid-row:3;margin-top:10px;padding-top:8px;border-top:2px dashed var(--trait)}
+.detail{grid-column:1/4;grid-row:4;margin-top:10px;padding-top:8px;border-top:2px dashed var(--trait)}
 .detail p{margin:0 0 4px}
 .detail .manque{color:#A3161B}
 .pied{margin-top:28px;padding:14px 12px calc(14px + env(safe-area-inset-bottom,0px));background:var(--vin);color:var(--papier);text-align:center;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.libelle{display:block;font-weight:700;margin:16px 0 8px}
+.palette{display:grid;grid-template-columns:repeat(10,1fr);gap:5px}
+.sw{aspect-ratio:1;border-radius:50%;border:3px solid transparent;padding:0;cursor:pointer}
+.sw[aria-pressed=true]{border-color:var(--encre);box-shadow:inset 0 0 0 3px var(--carte)}
+.pastille{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:.8rem;font-weight:700;box-shadow:0 0 0 2px var(--carte),0 0 0 3px var(--trait)}
+.tops{grid-column:2/4;grid-row:3;display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}
+.tops:empty{display:none}
+.tops .cap{font-size:.75rem;opacity:.75;margin-right:2px}
+.obl{font-weight:400;font-size:.8rem;color:#A3161B}
+.aide-couleur{margin:0 0 10px;font-size:.85rem;opacity:.85}
+.alerte{min-height:1.3em;margin:10px 0 0;font-weight:700;color:#A3161B}
+.palette.erreur{animation:secoue .4s}
+@keyframes secoue{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.groupe-res{display:grid;gap:12px}
+.groupe-res .lien{margin:0}
+.ligne-gen{display:flex;gap:10px}
+.btn.clair{background:var(--carte);color:var(--vin)}
+.btn.gen{flex:1;gap:8px}
+.btn.verrou{opacity:.55}
+.btn .ico{flex:none}
+.btn.couronne{width:56px;flex:none;padding:0;background:#E3B04B;color:var(--encre);border-color:var(--encre)}
+.note-verrou{margin:0;font-weight:700;color:#A3161B}
+.verrou-carte{text-align:center}
+.sw{border-width:2px}.sw[aria-pressed=true]{box-shadow:inset 0 0 0 2px var(--carte)}

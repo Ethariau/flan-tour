@@ -16,12 +16,12 @@
   <p>Bordeaux, toujours plus bon !</p>
 </header>
 <main>
-  <a class="retour" href="index.html">Retour aux pâtisseries</a>
-  <div class="vue-bloc" id="filtre">
-    <label for="vue">Classement de</label>
-    <select class="select" id="vue"><option value="">Tous les participants</option></select>
-  </div>
-  <p class="etat" id="etat" role="status"></p>
+  <a class="retour" href="index.html">Retour à l'accueil</a>
+  <section class="card verrou-carte" id="verrou" hidden>
+    <h2>Classement verrouillé</h2>
+    <p>Le classement général sera dévoilé à la fin du tour, lors de la révélation du podium. Reviens à ce moment-là !</p>
+  </section>
+  <p class="etat" id="etat" role="status">Chargement…</p>
   <ol class="classement" id="classement"></ol>
   <button class="btn" id="maj" type="button">Actualiser</button>
 </main>

@@ -16,14 +16,19 @@
 </header>
 <main>
   <section class="card">
-    <label class="nom" for="nom">Ton prénom</label>
+    <label class="nom" for="nom">Ton prénom <span class="obl">(obligatoire)</span></label>
     <input type="text" id="nom" autocomplete="given-name" placeholder="Ex. Camille">
+    <p class="libelle" id="lib-couleur">Ta couleur <span class="obl">(obligatoire)</span></p>
+    <p class="aide-couleur">Elle te représente dans les résultats (pastille avec ton initiale) : tu dois en choisir une avant de pouvoir noter.</p>
+    <div class="palette" id="palette" role="group" aria-labelledby="lib-couleur"></div>
+    <p class="alerte" id="alerte" role="alert"></p>
   </section>
   <section class="card">
     <h2>Les règles</h2>
     <ol class="regles">
       <li>Une note de 0 à 10 par critère, au demi-point près.</li>
       <li>Note juste après avoir goûté, avant de discuter avec les autres.</li>
+      <li>Ton prénom et ta couleur sont obligatoires : les formulaires restent verrouillés tant que tu n'as pas choisi les deux.</li>
       <li>Un critère non goûté ou non évalué ? Laisse-le vide : il n'entre pas dans la moyenne.</li>
     </ol>
   </section>
@@ -31,7 +36,16 @@
     <h2 class="script">Nos adresses</h2>
     <div class="liste" id="liste"></div>
   </section>
-  <a class="btn lien" href="resultats.html">Voir le classement</a>
+  <h2 class="script">Résultats</h2>
+  <div class="groupe-res">
+    <div class="ligne-gen">
+      <a class="btn lien gen verrou" id="btn-general" href="resultats.html">Classement général</a>
+      <a class="btn lien couronne" href="admin.html" aria-label="Espace organisateur (mot de passe)" title="Organisateur"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M3 19h18v2H3zM3 7l4.5 4L12 4l4.5 7L21 7l-2 10H5z"/></svg></a>
+    </div>
+    <p class="note-verrou" id="note-verrou" hidden>Classement verrouillé jusqu'à la révélation du podium.</p>
+    <a class="btn lien clair" href="perso.html">Mon classement perso</a>
+    <a class="btn lien clair" href="ideal.html">Mon flan idéal</a>
+  </div>
 </main>
 <footer class="pied">Le flan rapproche les gens</footer>
 <script src="app.js"></script>

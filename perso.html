@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon classement – Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="perso">
+<header class="compact">
+  <a href="index.html"><img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux, retour à l'accueil"></a>
+  <h1 id="titre-perso">Mon classement</h1>
+  <p>Tes flans, du meilleur au moins bon</p>
+</header>
+<main>
+  <a class="retour" href="index.html">Retour à l'accueil</a>
+  <div class="vue-bloc" id="filtre" hidden>
+    <label for="vue">Classement de</label>
+    <select class="select" id="vue"></select>
+  </div>
+  <p class="etat" id="etat" role="status">Chargement…</p>
+  <ol class="classement" id="classement"></ol>
+</main>
+<footer class="pied">Le flan rapproche les gens</footer>
+<script src="app.js"></script>
+<script src="perso.js"></script>
+<script>
+  if (typeof initPerso === 'undefined' || typeof getStatut === 'undefined') {
+    document.getElementById('etat').textContent = "Fichiers manquants ou pas à jour : vérifie perso.js et la dernière version d'app.js.";
+  }
+</script>
+</body>
+</html>

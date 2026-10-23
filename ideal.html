@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flan idéal – Flan tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scene.css">
+</head>
+<body data-page="ideal">
+<header class="compact">
+  <a href="index.html"><img class="logo" src="logo.png" width="900" height="410" alt="Flan-Tour Bordeaux, retour à l'accueil"></a>
+  <h1>Mon flan idéal</h1>
+  <p>Le meilleur de chaque critère</p>
+</header>
+<main>
+  <a class="retour" href="resultats.html">Retour au classement</a>
+  <div class="vue-bloc" id="filtre" hidden>
+    <label for="qui">Flan idéal de</label>
+    <select class="select" id="qui"></select>
+  </div>
+  <p class="etat" id="etat" role="status">Chargement…</p>
+  <section class="ideal" id="ideal" hidden>
+    <h2 class="script" id="titre-ideal"></h2>
+    <figure class="part"><svg id="flan" viewBox="0 0 440 420" role="img" aria-label="Flan pâtissier illustré avec les meilleures notes de chaque critère"></svg></figure>
+    <div class="sceau"><span>Moyenne du flan idéal</span><strong id="note-ideal"></strong></div>
+    <ul class="recette" id="recette"></ul>
+  </section>
+</main>
+<script src="app.js"></script>
+<script src="ideal.js"></script>
+<script>
+  if (typeof initIdeal === 'undefined' || typeof getStatut === 'undefined') {
+    document.getElementById('etat').textContent = "Fichiers manquants ou pas à jour : vérifie que ideal.js et la dernière version d'app.js sont bien en ligne.";
+  }
+</script>
+</body>
+</html>
